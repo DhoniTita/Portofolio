@@ -1076,7 +1076,7 @@ input#skilsbtn3:focus ~ .skils{
     .skils{
         width: calc(100% - 10px);
         margin: 0 5px;
-        height: 100%;
+        height: calc(100% - 50px);
         display: flex;
         flex-wrap: wrap;
         background: linear-gradient(to top,var(--firts-color),var(--firts-color-light));
@@ -1121,7 +1121,7 @@ input#skilsbtn3:focus ~ .skils{
     }
     .project{
         width: 90%;
-        height: calc(100%/2 - 30px);
+        height: calc(100%/2 - 80px);
         display: flex;
         flex-wrap: wrap;
         padding: 10px 20px;
