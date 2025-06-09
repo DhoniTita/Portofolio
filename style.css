@@ -42,7 +42,7 @@ nav{
     justify-content: center;
     position: fixed;
     top: 0;
-    background: transparent;
+    background: hsla(var(--hue),70% ,4% ,.2);
     z-index: 9999;
 }
 .nav-holder{
@@ -137,6 +137,7 @@ nav{
     width: 100%;
     height: 200px;
     transition: .5s;
+    background: hsla(var(--hue),70% ,4% ,.2);
     z-index: -2;
     backdrop-filter: blur(5px);
 }
@@ -208,7 +209,7 @@ main::-webkit-scrollbar{
 }
 section{
     width: 100%;
-    height: 100vh;
+    height: calc(100v - 50px);
     margin-top: 50px;
     display: flex;
     align-items: center;
@@ -297,6 +298,8 @@ section::-webkit-scrollbar{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     font-size: var(--sz-titile);
     position: relative;
@@ -304,7 +307,12 @@ section::-webkit-scrollbar{
 .home.name{
     margin: 0;
     height: 30px;
-    width: 100%;
+    width: fit-content;
+    font-size: 2.5rem;
+        background: linear-gradient(90deg, var(--firts-color), var(--firts-color-light));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     font-size: var(--sz-subtitle);
     font-family: var(--font-1);
     font-weight: 600;
@@ -317,6 +325,7 @@ section::-webkit-scrollbar{
     font-family: var(--font-1);
     font-weight: 500;
     position: relative;
+    left: 40px;
 }
 .home_profesion::after{
     content: '';
@@ -481,7 +490,7 @@ section::-webkit-scrollbar{
     top: 0;
     left: 0;
     transform: translate(-50% ,-50%);
-    animation: rolling 0.5s linear infinite;
+    animation: rolling 10s linear infinite;
 }
 @keyframes rolling {
     0%{
@@ -498,9 +507,6 @@ section::-webkit-scrollbar{
     animation-play-state: paused;
 }
 .contact{
-    width: 50px;
-    height: 50px;
-    font-size: 40px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -508,8 +514,6 @@ section::-webkit-scrollbar{
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    background-color: black;
-    border-radius: 50%;
     position: absolute;
 }
 .contact.one{
@@ -537,8 +541,7 @@ section::-webkit-scrollbar{
     display: flex;
     border-radius: 50%;
     overflow: hidden;
-    color: white;
-    animation: reverse-rolling 0.5s linear infinite;
+    animation: reverse-rolling 10s linear infinite;
 }
 @keyframes reverse-rolling {
     from{
@@ -567,18 +570,18 @@ section::-webkit-scrollbar{
 
 /* ABOUT END
 SKILLS */
-#skils{
-    height: calc(100% - 40px);
-    padding: 30px 5px 10px 5px;
+section#skils{
+    width: 100%;
+    height: 100%;
     flex-wrap: wrap;
 }
+
 #learn{
     width: 100%;
-    height: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    height: 170px;
+    margin-top: 50px;
 }
+
 #learn-swaper{
     width: 100%;
     height: 30px;
@@ -604,6 +607,13 @@ SKILLS */
     animation: autorun 10s linear infinite;
     animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
 }
+.learn-list>img{
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .learn-list>i{
     font-size: 25px;
 }
@@ -617,61 +627,23 @@ SKILLS */
 }
 #skils-container{
     width: 100%;
-    height: calc(100% - 110px);
+    height: calc(100% - 160px);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     position: relative;
-}
-#skils-container input{
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25px;
-    height: 25px;
-    background: transparent;
-    backdrop-filter: blur(2px);
-    border: 1px solid var(--firts-color);
-    border-radius: 50%;
-    z-index: 5;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px #000;
-    cursor: pointer;
-}
-input#skilsbtn1{
-    left: 40%;
-}
-input#skilsbtn1:focus ~ .skils{
-    transform: translateX(0);
-}
-input#skilsbtn2{
-    left: 50%;
-}
-input#skilsbtn2:focus ~ .skils{
-    transform: translateX(calc(-100% - 10px));
-}
-input#skilsbtn3{
-    left: 60%;
-}
-input#skilsbtn3:focus ~ .skils{
-    transform: translateX(calc(-200% - 20px));
+    overflow-x: scroll;
 }
 .skils{
-    width: calc(100%/2 - 10px);
+    width: calc(100%/3 - 10px);
     height: calc(100% - 100px);
     margin: 0 5px;
     display: flex;
     flex-wrap: wrap;
-    background: linear-gradient(to top,var(--firts-color),var(--firts-color-light));
+    background: linear-gradient(to top,var(--firts-color-alt),var(--firts-color-light));
     border-radius: 10px;
     transition: 0.5s;
 }
-.skils.D{background: #cb6318;}
-.skils.E{background: #7caa2d;}
-.skils.W{background: #34888c;}
 
 .skils img{
     width: 100%;
@@ -683,7 +655,7 @@ input#skilsbtn3:focus ~ .skils{
     font-weight: bolder;
     text-align: justify;
     width: 95%;
-    height: 120px;
+    width: fit-content;
     margin: 0 2.5%;  
     margin-bottom: 10px;
 }
@@ -712,38 +684,94 @@ input#skilsbtn3:focus ~ .skils{
     padding: 50px 10px 10px;
     display: flex;
     flex-wrap: wrap;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 .project{
-    width: calc(100%/2 - 90px);
-    height: calc(100%/2 - 120px);
+    width: calc(100%/3 - 44px);
+    height: calc(100%/2);
     display: flex;
     flex-wrap: wrap;
     padding: 10px 20px;
-    margin: 5px;
+    margin: 2px;
     margin-top: 10px;
-    background: #000;
+    background: black;
     border-radius: 10px;
 }
 .project:first-child{
     margin-top: 70px;
 }
 .project h1{
+    width: 100%;
     height: 20px;
     margin: 0;
     margin-bottom: 5px;
     font-size: 20px;
 }
 .project p{
-    height: 70px;
+    width: 100%;
+    height: 20px;
     font-size: 15px;
     margin: 0;
     margin-bottom: 5px;
 }
 .project img{
     width: 100%;
-    height: calc(100% - 100px);
+    height: calc(100% - 50px);
+    border-radius: 5px;
 }
+/* CONTACT */
+#mail{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white;
+}
+form{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+}
+
+input{
+    width: calc(100% - 20px);
+    height: 40px;
+    border-radius: 15px;
+    padding-left: 20px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.1);
+}
+textarea{
+    width: calc(100% - 20px);
+    height: 20px;
+    border-radius: 15px;
+    padding: 20px 0;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+        background: rgba(0, 0, 0, 0.1);
+}
+form button{
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 1px 1px black;
+    background: var(--body-color);
+    border: none;
+}
+
+
+
+
 /* PHONE DEVICE */
 @media(max-width: 576px){
     /* NAV NAVIGTION */
@@ -846,6 +874,8 @@ input#skilsbtn3:focus ~ .skils{
         padding-bottom: 20px;
         padding-top: 10px;
         display: flex;
+        align-items: normal;
+        justify-content: normal;
         flex-wrap: wrap;
         flex-direction: column;
         font-size: var(--sz-titile);
@@ -858,6 +888,7 @@ input#skilsbtn3:focus ~ .skils{
         font-size: var(--sz-subtitle);
         font-family: var(--font-1);
         font-weight: 600;
+        left: 0;
     }
     .home_profesion{
         margin: 0;
@@ -867,6 +898,7 @@ input#skilsbtn3:focus ~ .skils{
         font-family: var(--font-1);
         font-weight: 500;
         position: relative;
+        left: 0;
     }
     .home_profesion::after{
         content: '';
@@ -986,13 +1018,6 @@ input#skilsbtn3:focus ~ .skils{
         color: var(--firts-color-light);
     }
     /* SKILS */
-    #learn{
-        width: 100%;
-        height: 100px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
     #learn-swaper{
         width: 100%;
         height: 30px;
@@ -1029,80 +1054,30 @@ input#skilsbtn3:focus ~ .skils{
             left: calc(var(--width) * -1);
         }
     }
-    #skils-container{
-        width: 100%;
-        height: calc(100% - 110px);
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        position: relative;
-    }
-    #skils-container input{
-        position: absolute;
-        bottom: 5px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 25px;
-        height: 25px;
-        background: transparent;
-        backdrop-filter: blur(2px);
-        border: 1px solid var(--firts-color);
-        border-radius: 50%;
-        z-index: 5;
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-        text-shadow: 1px 1px #000;
-        cursor: pointer;
-    }
-    input#skilsbtn1{
-        left: 40%;
-    }
-    input#skilsbtn1:focus ~ .skils{
-        transform: translateX(0);
-    }
-    input#skilsbtn2{
-        left: 50%;
-    }
-    input#skilsbtn2:focus ~ .skils{
-        transform: translateX(calc(-100% - 10px));
-    }
-    input#skilsbtn3{
-        left: 60%;
-    }
-    input#skilsbtn3:focus ~ .skils{
-        transform: translateX(calc(-200% - 20px));
-    }
     .skils{
         width: calc(100% - 10px);
         margin: 0 5px;
-        height: 100%;
         display: flex;
         flex-wrap: wrap;
         background: linear-gradient(to top,var(--firts-color),var(--firts-color-light));
         border-radius: 10px;
         transition: 0.5s;
     }
-    .skils.D{background: #cb6318;}
-    .skils.E{background: #7caa2d;}
-    .skils.W{background: #34888c;}
 
     .skils img{
         width: 100%;
         height: 200px;
         background-color: #fff;
     }
-    .skils p{
-        font-size: 14px;
-        font-weight: bolder;
-        text-align: justify;
-        width: 95%;
-        height: 120px;
-        margin: 0 2.5%;  
-        margin-bottom: 10px;
+    h1.scroll{
+        display: block;
+        position: absolute;
+        top: 50%;
+        height: 50%;
+        transform: translate(-50% , -50%);
     }
     .skils-icon{
-        height: calc(100% - 430px);
+        height: fit-content;
         width: 95%;
         margin: 0 2.5%;
         display: grid;
@@ -1114,44 +1089,46 @@ input#skilsbtn3:focus ~ .skils{
     #portofolio{
         width: calc(100% - 10px);
         height: calc(100% - 60px);
-        padding: 50px 10px 10px;
+        padding: 55px 20px 0 20px;
         display: flex;
         flex-wrap: wrap;
         overflow-y: scroll;
     }
     .project{
         width: 90%;
-        height: calc(100%/2 - 30px);
+        height: 600px;
         display: flex;
         flex-wrap: wrap;
         padding: 10px 20px;
+        padding-bottom: 20px;
         margin-top: 10px;
-        background: #000;
         border-radius: 10px;
     }
     .project:first-child{
         margin-top: 70px;
     }
     .project h1{
+        width: 100%;
         height: 20px;
         margin: 0;
         margin-bottom: 5px;
         font-size: 20px;
     }
     .project p{
-        height: 70px;
+        width: 100%;
+        height: 30px;
         font-size: 10px;
         margin: 0;
         margin-bottom: 5px;
     }
     .project img{
         width: 100%;
-        height: calc(100% - 100px);
+        height: calc(100% - 50px);
     }
 }
 
 /* MAVIGATION AND HOME SECTION FOR TABLET AND LAPTOP */
-@media(min-width:577px){
+@media(min-width:577px) and (max-width:1000px){
     .menu{
         display: flex;
         flex-direction: row-reverse;
@@ -1216,10 +1193,27 @@ input#skilsbtn3:focus ~ .skils{
         background: linear-gradient(90deg, var(--firts-color), var(--firts-color-light));
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;}
+        -webkit-text-fill-color: transparent;
+        left: 0;
+    }
+        
 
     .home_profesion{
         height: fit-content;
         font-size: 1.2rem;
+        left: 0;
+    }
+    .scroll{
+        display: flex;
+        position: absolute;
+        top: 50%;
+        height: 50%;
+        transform: translate(-50% , -50%);
+    }
+    .skils{
+        width: calc(100%/2 - 10px);
+    }
+    .project{
+           width: calc(100%/2 - 44px);
     }
 }

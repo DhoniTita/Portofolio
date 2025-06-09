@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>It's Dhoni</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "aWxOG5N4VOwLJacHA",
+      });
+   })();
+</script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -24,6 +34,7 @@
                         <li><a href="#about">about</a></li>
                         <li><a href="#skils">skils</a></li>
                         <li><a href="#portofolio">portofolio</a></li>
+                        <li><a href="#mail">contact</a></li>
                     </ul>
                 </div>
             </span>
@@ -43,7 +54,7 @@
             </div>
             <div class="home_container">
                 hello
-                <h1 class="home name"></h1>
+                <h1 class="home name">I Ramadhoni</h1>
                 <h1 class="home_profesion">i am <i></i></h1>
                 <a href="#about" class="home_scroll">
                     <div class="icon">
@@ -64,10 +75,10 @@
                 <div class="roll">
                     <img src="./Img/VideoCapture_20250410-112053-removebg-preview (1).png" alt="">
                     <div class="roll-icon">
-                        <a href="" class="contact one"><i class="bi bi-whatsapp"></i></i></a>
-                        <a href="" class="contact two"><i class="bi bi-instagram"></i></a>
-                        <a href="" class="contact three"><i class="bi bi-github"></i></a>
-                        <a href="" class="contact four"><i class="bi bi-linkedin"></i></a>
+                        <a href="" class="contact one"><i class="bi bi-whatsapp" style="color: white; background: rgb(47, 255, 57);"></i></i></a>
+                        <a href="" class="contact two"><i class="bi bi-instagram" style="color: aliceblue; background: linear-gradient(145deg,#f9ce34,#ee2a7b,#6628d7); overflow: visible;"></i></a>
+                        <a href="" class="contact three"><i class="bi bi-github" style="color: aliceblue; background: black;"></i></a>
+                        <a href="" class="contact four"><i class="bi bi-linkedin" style="color: rgb(1, 1, 201); background: white;"></i></a>
                     </div>
                 </div>
                 <div id="contact-info">
@@ -83,56 +94,32 @@
                 <div id="learn-swaper" style="
                     --width: 30px;
                     --height: 30px;
-                    --quantity: 7;
+                    --quantity: 6;
                     ">
                     <div id="learn-container">
-                        <div class="learn-list" style="--position:1;">
-                            <i class="bi bi-github"></i>
-                                    
-                        </div>
-                        <div class="learn-list" style="--position:2;">
-                            <i class="bi bi-github"></i>
-                            <p class="ket"></p>        
-                        </div>
-                        <div class="learn-list" style="--position:3;">
-                            <i class="bi bi-github"></i>
-                            <p class="ket"></p>        
-                        </div>
-                        <div class="learn-list" style="--position:4;">
-                            <i class="bi bi-github"></i>
-                            <p class="ket"></p>        
-                        </div>
-                        <div class="learn-list" style="--position:5;">
-                            <i class="bi bi-github"></i>
-                            <p class="ket"></p>        
-                        </div>
-                        <div class="learn-list" style="--position:6;">
-                            <i class="bi bi-github"></i>
-                            <p class="ket"></p>        
-                        </div>
-                        <div class="learn-list" style="--position:7;">
-                            <i class="bi bi-github"></i>
-                            <p class="ket"></p>        
-                        </div>
-
+                        <div class="learn-list" style="--position:1;"><img src="./Assets/Adobe-Photoshop-logo.png" alt="./Assets/Adobe-Photoshop-logo.png"></div>
+                        <div class="learn-list" style="--position:2;"><img src="./Assets/Coreldraw-x7-logo.png" alt="./Assets/Coreldraw-x7-logo.png"></div>
+                        <div class="learn-list" style="--position:3;"><img src="./Assets/Githublogo.jpg" alt=""></div>
+                        <div class="learn-list" style="--position:4;"><img src="./Assets/HTML-Logo.png" alt=""></div>
+                        <div class="learn-list" style="--position:5;"><img src="./Assets/CSS-logo.png" alt=""></div>
+                        <div class="learn-list" style="--position:6;"><img src="./Assets/Javascript-logo.png" alt=""></div>
+                        <div class="learn-list" style="--position:7;"><img src="./Assets/Git-logo.png" alt=""></div>
                     </div>
                 </div>
+                <h1 class="tittle">Scroll</h1>
             </div>
             <div id="skils-container">
-                <input type="button" name="" id="skilsbtn1" value="1">
-                <input type="button" name="" id="skilsbtn2" value="2">
-                <input type="button" name="" id="skilsbtn3" value="3">
-                <div class="skils D">
+                <div class="skils">
                     <h1 class="tittle">Design Graphic</h1>
                     <img src="./Assets/Designing.png" alt="fotoskils">
                     <p>Saya sudah mengetahui unsur dan prinsip design, sedang mencoba menerapakan unsur dan prinsip tersebut dalam pembuatan logo poster dan kemasan.dan ingin segera memplejari teknik tracing delam graphic design</p>
                     <div class="skils-icon">
                         <div style="background-image: url(./Assets/Coreldraw-x7-logo.png);"></div>
-                        <div style="background-image: url(./Assets/Adobe-Ilustrator-logo.png);"></div>
                     </div>
+                    
 
                 </div>
-                <div class="skils E">
+                <div class="skils">
                     <h1 class="tittle">Editor</h1>
                     <img src="./Assets/Editing.png" alt="fotoskils">
                     <p>Saya sedang memulai belajar mengedit foto maupun vidio, sudah mempelajari unsur visual untuk editing foto seperti warna dan pencahayaan untuk memperindah suatu foto. untuk editing vidio saya masih memiliki banyak kekurangan dan banyak hal yang masih tidak di mengerti</p>
@@ -141,7 +128,7 @@
                     </div>
 
                 </div>
-                <div class="skils W">
+                <div class="skils">
                     <h1 class="tittle">Web development</h1>
                     <img src="./Assets/Progaming.png" alt="fotoskils">
                     <p>Saya sudah mulai mengusai beberapa hal dasar dalam web development, mengetahui bahasa pemrogaman HTML dan CSS, Sedang mengulik Bahasa progaman Javascript, sedang mencoba menggunakan Github dan Git untuk akses Progaming individu maupun kelompok </p>
@@ -170,14 +157,33 @@
             </div>
             <div class="project">
                 <h1>Cooming soon</h1>
-                <p>Wait broooooooooooooooooooooooooo </p>
+                <p>Sabar ya</p>
                 <img src="" alt="">
             </div>
             <div class="project">
                 <h1>Cooming soon</h1>
-                <p>Wait broooooooooooooooooooooooooo</p>
+                <p>Sabar ya</p>
                 <img src="" alt="">
             </div>
+            <div class="project">
+                <h1>Cooming soon</h1>
+                <p>Sabar ya</p>
+                <img src="" alt="">
+            </div>              
+            <div class="project">
+                <h1>Cooming soon</h1>
+                <p>Sabar ya</p>
+                <img src="" alt="">
+            </div>
+        </section>
+        <section id="mail">
+            <form>
+                <h1 class="tittle">contact us</h1>
+                <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                <textarea rows="4" name="message" id="message" placeholder="Enter Your Message" required></textarea>
+                <button type="button" onclick="SendMail()">Send</button>
+            </form>
         </section>
     </main>
 

@@ -58,3 +58,14 @@ main.addEventListener('scroll',() => {
 
 // TEXT PROPERTY
 document.querySelector('.name').textContent = 'i ramadhoni'
+
+function SendMail(){
+    let parms = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    }
+
+    emailjs.send('service_83zjqb7', 'template_edfp4ee', parms)
+        .then(alert("Your message has been sent successfully!"));
+}
