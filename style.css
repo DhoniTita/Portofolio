@@ -1057,6 +1057,10 @@ form button{
     .skils{
         width: calc(100% - 10px);
         margin: 0 5px;
+<<<<<<< HEAD
+=======
+        height: calc(100% - 50px);
+>>>>>>> 0e2bd0f3d3b6ae9c9af9af349b6c95f6080b79b1
         display: flex;
         flex-wrap: wrap;
         background: linear-gradient(to top,var(--firts-color),var(--firts-color-light));
@@ -1096,7 +1100,11 @@ form button{
     }
     .project{
         width: 90%;
+<<<<<<< HEAD
         height: 600px;
+=======
+        height: calc(100%/2 - 80px);
+>>>>>>> 0e2bd0f3d3b6ae9c9af9af349b6c95f6080b79b1
         display: flex;
         flex-wrap: wrap;
         padding: 10px 20px;
